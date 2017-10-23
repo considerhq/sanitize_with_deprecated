@@ -29,3 +29,6 @@ Or install it yourself as:
 Use the exposed `Sanitize::Config::RELAXED_WITH_DEPRECATED` configuration
 constant as described in
 [sanitize’s documentation](https://github.com/rgrove/sanitize#quick-start).
+
+Other than adding a few additional tags, it’s exactly the same as
+`Sanitize::Config::RELAXED`.
