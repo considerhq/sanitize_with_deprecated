@@ -38,6 +38,13 @@ describe Sanitize::Config::RELAXED_WITH_DEPRECATED do
     end
   end
 
+  it "doesn’t clobber other attributes" do
+    preexisting = %w[class id]
+    preexisting.each do |attribute|
+      expect(subject[:attributes][:all]).to include(attribute)
+    end
+  end
+
   it "is a fully fledged Sanitize config object" do
     expect(subject.keys).to eq([
       :elements, :allow_doctype, :attributes, :protocols, :css

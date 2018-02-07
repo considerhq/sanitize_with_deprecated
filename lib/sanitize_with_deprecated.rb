@@ -6,6 +6,8 @@ Sanitize::Config::RELAXED_WITH_DEPRECATED = Sanitize::Config.merge(
     acronym basefont big blink center command dir font marquee strike tt
   ],
   attributes: Sanitize::Config::RELAXED[:attributes].merge(
-    all: %w[bgcolor width height border color]
+    all: Sanitize::Config::RELAXED[:attributes][:all] + %w[
+      bgcolor width height border color
+    ]
   )
 )
